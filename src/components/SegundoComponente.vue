@@ -1,9 +1,8 @@
 <template>
+    <!-- Conceitos abordados: Primeiros componentes -->
     <p><br>Chuuuupa React</p>
 </template>
 <script>
-import { defineComponent } from '@vue/composition-api'
-
 export default{
     name: 'SegundoComponente'
     
