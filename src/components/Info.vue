@@ -52,7 +52,7 @@ export default {
         // do botão de acordo com esse valor.
         showEmail(){
             this.mostrar_email = !this.mostrar_email
-            if(this.mostrar_email === false){
+            if(!this.mostrar_email){
                 this.textoBotao = "Mostrar e-mail"
             }else{
                 this.textoBotao = "Esconder e-mail"
