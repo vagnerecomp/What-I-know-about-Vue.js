@@ -1,15 +1,17 @@
 <template>
   <!-- Conceitos abordados: Componentização  -->
   <div class="main">
+    <Header/>
     <PrimeiroComponente/>
-   <SegundoComponente/>
-   <LifeCycle/>
-   <Pessoa/>
+    <SegundoComponente/>
+    <LifeCycle/>
+    <Pessoa/>
   </div>
    
 </template>
 
 <script>
+import Header from './components/Header.vue'
 import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import SegundoComponente from './components/SegundoComponente.vue'
 import LifeCycle from './components/LifeCycle.vue'
@@ -20,7 +22,8 @@ export default {
     PrimeiroComponente,
     SegundoComponente,
     LifeCycle,
-    Pessoa
+    Pessoa,
+    Header
   },
   data(){
     return{
