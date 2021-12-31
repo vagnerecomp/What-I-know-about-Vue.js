@@ -1,16 +1,23 @@
 <template>
     <!-- Conceitos abordados: Diretivas v-if, v-else e v-show
-        componentização, argumentos dinâmicos, métodos -->
+        componentização, argumentos dinâmicos, métodos, renderização de listas com v-for-->
     <div>
         <!-- Uso das diretivas v-if e v-else -->
         <p v-if="esta_trabalhando">Eu estou trabalhando atualmente</p>
         <p v-else>Estou em busca de oportunidades</p>
-        <p>Utilizo as seguntes techs:</p>
+        
+        <p>Utilizo as seguntes techs para back-end:</p>
         <ul>
-            <li>ReactJS</li>
-            <li>VueJS</li>
-            <li>NodeJS</li>
+            <li v-for="(tech, index) in backend_technologies" v-bind:key="index">{{tech}}</li>
         </ul>
+
+        <p>Utilizo as seguintes techs para front-end:</p>
+        <ul>
+            <li v-for="tech in frontend_technologies" :key="tech.id">
+                {{tech.language}}
+            </li>
+        </ul>
+
 
         <!-- Botão mostra ou ocultar email usando evento e método -->
         <div>
@@ -42,7 +49,15 @@ export default {
                 /*Se o valor dessa prop for verdadeiro o email sera exibido,
                 senão, não será exibido porque do atributo v-show*/
             meu_link: 'https://www.google.com',
-            textoBotao: "Mostrar e-mail"
+            textoBotao: "Mostrar e-mail",
+            
+            // dados para v-for:
+            backend_technologies: ['Java', 'Python', 'Node.js'],
+            frontend_technologies: [
+                {id:0, language: 'HTML'},
+                {id:1, language: 'CSS'},
+                {id:2, language: 'Vue.js'}
+            ]
         }
     },
     methods: {
