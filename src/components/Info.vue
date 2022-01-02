@@ -1,6 +1,6 @@
 <template>
     <!-- Conceitos abordados: Diretivas v-if, v-else e v-show
-        componentização, argumentos dinâmicos, métodos, renderização de listas com v-for-->
+        componentização, argumentos dinâmicos, métodos, renderização de listas com v-for -->
     <div>
         <!-- Uso das diretivas v-if e v-else -->
         <p v-if="esta_trabalhando">Eu estou trabalhando atualmente</p>
