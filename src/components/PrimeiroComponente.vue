@@ -20,14 +20,20 @@
             </div>
             <p style="font-size: 20px">Data binding here: <b>{{input_name}}</b></p>
 
+            <MultiplosEventos />
+
         
 
     </div>
 </template>
 
 <script>
+import MultiplosEventos from './MultiplosEventos.vue'
 export default{
     name: 'PrimeiroComponente',
+    components:{
+        MultiplosEventos
+    },
     data() {
         return{
             frame: 'Angular',
