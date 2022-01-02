@@ -1,7 +1,7 @@
 <template>
-    <!-- Conteúdos abordados: Trabalhando com multiplos eventos -->
+    <!-- Conteúdos abordados: Trabalhando com multiplos eventos, tornando os dados dos métodos dinâmicos -->
     <div>
-        <button @click="first($event), second($event), third($event), clear($event)">Ativar multtiplos eventos</button>
+        <button @click="first(txt1, $event), second(txt2, $event), third(txt3, $event), clear($event)">Ativar multtiplos eventos</button>
         <p>{{multiplos_eventos}}</p>
     </div>
 </template>
@@ -12,22 +12,23 @@ export default {
     data(){
         return{
             multiplos_eventos: "",
-            txt1: 'Primeiro evento',
-            txt2: 'Segundo evento'
+            txt1: 'Primeiro evento ativado',
+            txt2: 'Segundo evento ativado',
+            txt3: 'Terceiro ativado'
         }
     },
     methods:{
-        first(e){
-            this.multiplos_eventos = this.txt1
+        first(txt, e){
+            this.multiplos_eventos = txt
         },
-        second(e){
+        second(txt, e){
             setTimeout(()=>{
-                this.multiplos_eventos = this.txt2
+                this.multiplos_eventos = txt
             }, 1000)
         },
-        third(e){
+        third(txt, e){
             setTimeout(()=>{
-                this.multiplos_eventos = this.txt1 + " " + this.txt2
+                this.multiplos_eventos = txt
             }, 2000)
         },
         clear(e){
