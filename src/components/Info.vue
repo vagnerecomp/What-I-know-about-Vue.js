@@ -1,8 +1,9 @@
 <template>
     <!-- Conceitos abordados: Diretivas v-if, v-else e v-show
-        componentização, argumentos dinâmicos, métodos, renderização de listas com v-for -->
+        componentização, argumentos dinâmicos, métodos, renderização de listas com v-for, props -->
     <div>
         <!-- Uso das diretivas v-if e v-else -->
+ 
         <p v-if="esta_trabalhando">Eu estou trabalhando atualmente</p>
         <p v-else>Estou em busca de oportunidades</p>
         
@@ -24,7 +25,7 @@
             <button @click="showEmail">{{textoBotao}}</button>
         </div>
         <!-- Uso da diretiva v-show -->
-        <p v-show="mostrar_email">Mande um email para: {{email}}</p>
+        <p v-show="mostrar_email">Mande um email para: {{compEmail}}</p> <!-- compEmail é uma props que vem do componente Pessoa.vue-->
         <p>Você pode ver o meu portifólio <a :href="meu_link" target="_blank"> clicando aqui</a></p>
         <Picture/>
     </div>
@@ -35,6 +36,9 @@ export default {
     name: 'Info',
     components:{
         Picture
+    },
+    props: {
+        compEmail: String
     },
     data(){
         return{

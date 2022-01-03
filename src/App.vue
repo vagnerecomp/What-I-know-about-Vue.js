@@ -1,8 +1,8 @@
 <template>
   <!-- Conceitos abordados: Componentização  -->
   <div class="main">
-    <Header/>
-    <PrimeiroComponente/>
+    <Header :esta_logado = !true /> <!-- enviando essa prop para o componente Header-->
+    <PrimeiroComponente/>           <!-- caso esta_logado seja true, a opção Mostrar Perfil aparece no header, caso contrario, não aparece.-->
     <SegundoComponente/>
     <LifeCycle/>
     <Pessoa/>

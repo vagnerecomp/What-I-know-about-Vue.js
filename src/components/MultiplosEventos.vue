@@ -1,5 +1,6 @@
 <template>
-    <!-- Conteúdos abordados: Trabalhando com multiplos eventos, tornando os dados dos métodos dinâmicos -->
+    <!-- Conteúdos abordados: Trabalhando com multiplos eventos,
+    tornando os dados dos métodos dinâmicos, reutilização de componentes-->
     <div>
         <button @click="first(txt1, $event), second(txt2, $event), third(txt3, $event), clear($event)">Ativar multtiplos eventos</button>
         <p>{{multiplos_eventos}}</p>

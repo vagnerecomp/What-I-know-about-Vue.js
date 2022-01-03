@@ -1,6 +1,6 @@
 <template>
     <!-- Conceitos abordados: Dados dinâmicos (interpolação)
-    e Data binding -->
+    e Data binding, multiolos eventos-->
     <div>
         <h1>Olá {{frame}}!</h1>
 
